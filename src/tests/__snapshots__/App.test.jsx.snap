@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente Principal Teste de snpashot do APP Verifica se elementos renderizam de forma correta 1`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <h1>
+      ByteBank
+    </h1>
+  </header>
+  <div
+    class="Conta-header"
+  >
+    <h2>
+      Conta
+    </h2>
+    <p>
+      Saldo: 
+      <span
+        class="Saldo-valor"
+        data-testid="saldo-conta"
+      >
+        R$ 1000
+      </span>
+    </p>
+    <form>
+      <div>
+        <label>
+          Depósito
+          <input
+            data-testid="transacao"
+            name="transacao"
+            type="radio"
+            value="deposito"
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          Saque
+          <input
+            data-testid="transacao"
+            name="transacao"
+            type="radio"
+            value="saque"
+          />
+        </label>
+      </div>
+      <label>
+        Valor:
+      </label>
+      <input
+        data-testid="valor"
+        name="valor"
+        type="text"
+        value="0"
+      />
+      <div>
+        <button
+          type="submit"
+        >
+          Realizar operação
+        </button>
+      </div>
+    </form>
+  </div>
+  <div
+    data-testid="transacoes"
+  />
+</div>
+`;

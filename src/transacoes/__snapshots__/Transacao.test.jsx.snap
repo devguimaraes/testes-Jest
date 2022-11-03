@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente de transacao do extrato Snapshot do componente deve permancer sempre o mesmo 1`] = `
+<div>
+  <div
+    class="transacao-container"
+  >
+    <p>
+      02/11/2022
+    </p>
+    <p>
+      saque
+    </p>
+    <p>
+      R$ 
+      20.00
+    </p>
+  </div>
+</div>
+`;

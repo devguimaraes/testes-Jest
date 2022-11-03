@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lista de transacoes Snpashot de lista de transacoes 1`] = `
+<div
+  data-testid="transacoes"
+>
+  <div
+    class="transacao-container"
+  >
+    <p>
+      10/08/2020
+    </p>
+    <p>
+      saque
+    </p>
+    <p>
+      R$ 
+      10
+    </p>
+  </div>
+  <div
+    class="transacao-container"
+  >
+    <p>
+      26/09/2020
+    </p>
+    <p>
+      deposito
+    </p>
+    <p>
+      R$ 
+      20
+    </p>
+  </div>
+</div>
+`;
