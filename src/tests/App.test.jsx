@@ -1,14 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import React from "react";
-import {
-  fireEvent,
-  getByLabelText,
-  getByRole,
-  getByTestId,
-  getByText,
-  render,
-  screen,
-} from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import App, { calcularNovoSaldo } from "../App";
 import { act } from "react-dom/test-utils";
@@ -16,7 +8,7 @@ import { act } from "react-dom/test-utils";
 describe("Componente Principal", () => {
   describe("Quando abrir app do banco", () => {
     it("O nome do banco é exibido", async () => {
-      await render(<App />);
+      render(<App />);
 
       const nomeDoBanco = screen.getByText("ByteBank");
 
@@ -24,23 +16,23 @@ describe("Componente Principal", () => {
     });
 
     it("Saldo inicial sendo exibido", async () => {
-      await render(<App />);
+      render(<App />);
 
       const saldoEmTela = screen.getByText("Saldo:");
       expect(saldoEmTela).toBeInTheDocument();
     });
 
     it("O botão de realizar operacao é exibido", async () => {
-      await act(() => render(<App />));
+      act(() => render(<App />));
 
       const botao = screen.getByRole("button");
       expect(botao).toBeInTheDocument();
     });
   });
 
-  describe("Quando realizar a transação", () => {
-    it("Quando realizar um saque, o saldo precisa diminuir", async () => {
-      await render(<App />);
+  describe("Quando realizar a transação: ", () => {
+    it("De saque, o saldo precisa diminuir", async () => {
+      render(<App />);
 
       const valores = {
         transacao: "saque",
@@ -52,8 +44,8 @@ describe("Componente Principal", () => {
       expect(novoSaldo).toBe(100);
     });
 
-    it("Quando realizar o saque, a transacao deve ser realizada", async () => {
-      await render(<App />);
+    it("De saque, a transacao deve ser realizada", async () => {
+      render(<App />);
 
       const saldo = screen.getByText("R$ 1000");
       const transacao = screen.getByLabelText("Saque");
@@ -68,8 +60,8 @@ describe("Componente Principal", () => {
       expect(saldo.textContent).toBe("R$ 990");
     });
 
-    it("Quando realizar um deposito o saldo precisa aumentar", async () => {
-      await render(<App />);
+    it("De deposito o saldo precisa aumentar", async () => {
+      render(<App />);
 
       const valores = {
         transacao: "deposito",
@@ -83,7 +75,7 @@ describe("Componente Principal", () => {
 
   describe("Teste de snpashot do APP", () => {
     it("Verifica se elementos renderizam de forma correta", async () => {
-      const { container } = await render(<App />);
+      const { container } = render(<App />);
 
       expect(container.firstChild).toMatchSnapshot();
     });
