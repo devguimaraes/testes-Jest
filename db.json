@@ -1,6 +1,6 @@
 {
   "conta": {
-    "saldo": 990
+    "saldo": 1000
   },
   "transacoes": [
     {
@@ -17,57 +17,93 @@
     },
     {
       "transacao": "saque",
-      "valor": "10000",
-      "data": "02/11/2022",
+      "valor": "10",
+      "data": "03/11/2022",
       "id": 3
     },
     {
       "transacao": "saque",
       "valor": "10",
-      "data": "02/11/2022",
+      "data": "03/11/2022",
       "id": 4
     },
     {
       "transacao": "saque",
       "valor": "10",
-      "data": "02/11/2022",
+      "data": "03/11/2022",
       "id": 5
     },
     {
       "transacao": "saque",
       "valor": "10",
-      "data": "02/11/2022",
+      "data": "03/11/2022",
       "id": 6
     },
     {
       "transacao": "saque",
       "valor": "10",
-      "data": "02/11/2022",
+      "data": "03/11/2022",
       "id": 7
     },
     {
       "transacao": "saque",
       "valor": "10",
-      "data": "02/11/2022",
+      "data": "03/11/2022",
       "id": 8
     },
     {
       "transacao": "saque",
       "valor": "10",
-      "data": "02/11/2022",
+      "data": "03/11/2022",
       "id": 9
     },
     {
-      "transacao": "saque",
-      "valor": "10",
-      "data": "02/11/2022",
+      "transacao": "deposito",
+      "valor": "20",
+      "data": "03/11/2022",
       "id": 10
     },
     {
       "transacao": "saque",
       "valor": "10",
-      "data": "02/11/2022",
+      "data": "03/11/2022",
       "id": 11
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "03/11/2022",
+      "id": 12
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "03/11/2022",
+      "id": 13
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "03/11/2022",
+      "id": 14
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "03/11/2022",
+      "id": 15
+    },
+    {
+      "transacao": "deposito",
+      "valor": "10",
+      "data": "03/11/2022",
+      "id": 16
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "03/11/2022",
+      "id": 17
     }
   ]
 }

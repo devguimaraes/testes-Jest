@@ -4,7 +4,7 @@ import Transacoes from "./Transacoes";
 
 const transacoesFeitas = [
   {
-    valor: 10,
+    valor: "10",
     transacao: "saque",
     data: "10/08/2020",
     id: 1,

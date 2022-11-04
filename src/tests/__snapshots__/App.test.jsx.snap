@@ -60,6 +60,7 @@ exports[`Componente Principal Teste de snpashot do APP Verifica se elementos ren
       />
       <div>
         <button
+          disabled=""
           type="submit"
         >
           Realizar operação

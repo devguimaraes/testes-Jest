@@ -8,7 +8,9 @@ import { act } from "react-dom/test-utils";
 describe("Componente Principal", () => {
   describe("Quando abrir app do banco", () => {
     it("O nome do banco é exibido", async () => {
-      render(<App />);
+      await act(async () => {
+        render(<App />);
+      });
 
       const nomeDoBanco = screen.getByText("ByteBank");
 
@@ -16,14 +18,18 @@ describe("Componente Principal", () => {
     });
 
     it("Saldo inicial sendo exibido", async () => {
-      render(<App />);
+      await act(async () => {
+        render(<App />);
+      });
 
       const saldoEmTela = screen.getByText("Saldo:");
       expect(saldoEmTela).toBeInTheDocument();
     });
 
     it("O botão de realizar operacao é exibido", async () => {
-      act(() => render(<App />));
+      await act(async () => {
+        render(<App />);
+      });
 
       const botao = screen.getByRole("button");
       expect(botao).toBeInTheDocument();
@@ -31,21 +37,27 @@ describe("Componente Principal", () => {
   });
 
   describe("Quando realizar a transação: ", () => {
-    it("De saque, o saldo precisa diminuir", async () => {
-      render(<App />);
+    it("De saque, o saldo precisa diminuir", () => {
+      act(() => {
+        render(<App />);
+      });
 
-      const valores = {
-        transacao: "saque",
-        valor: 50,
-      };
+      act(() => {
+        const valores = {
+          transacao: "saque",
+          valor: 50,
+        };
 
-      const novoSaldo = calcularNovoSaldo(valores, 150);
+        const novoSaldo = calcularNovoSaldo(valores, 150);
 
-      expect(novoSaldo).toBe(100);
+        expect(novoSaldo).toBe(100);
+      });
     });
 
     it("De saque, a transacao deve ser realizada", async () => {
-      render(<App />);
+      await act(async () => {
+        render(<App />);
+      });
 
       const saldo = screen.getByText("R$ 1000");
       const transacao = screen.getByLabelText("Saque");
@@ -61,7 +73,9 @@ describe("Componente Principal", () => {
     });
 
     it("De deposito o saldo precisa aumentar", async () => {
-      render(<App />);
+      await act(async () => {
+        render(<App />);
+      });
 
       const valores = {
         transacao: "deposito",
@@ -74,7 +88,7 @@ describe("Componente Principal", () => {
   });
 
   describe("Teste de snpashot do APP", () => {
-    it("Verifica se elementos renderizam de forma correta", async () => {
+    it("Verifica se elementos renderizam de forma correta", () => {
       const { container } = render(<App />);
 
       expect(container.firstChild).toMatchSnapshot();
